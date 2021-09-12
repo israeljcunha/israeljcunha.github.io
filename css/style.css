@@ -86,6 +86,20 @@ img{
     box-shadow: var(--outer-shadow-0);
 }
 
+.hover-in-shadow:after{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.hover-in-shadow:hover:after{
+    box-shadow: var(--outer-shadow)
+}
+
 /* header */
 .header{
     padding:  20px 15px;
@@ -119,6 +133,10 @@ img{
     border-radius: 50%;
     justify-content: center;
     transition: all 0.3s ease;
+}
+
+.header .hamburger-btn:after{
+    border-radius: 50%;
 }
 
 .header .hamburger-btn span{
