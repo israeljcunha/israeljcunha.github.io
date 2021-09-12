@@ -2,8 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,500&display=swap');
 
-/* global */
 
+/* var */
+
+:root{
+    --bg-black-900: #000000;
+    --bg-black-100: #dddddd;
+    --bg-black-50: #eff0f4;
+    --text-black-900: #000000;
+    --text-black-700: #555555;
+    --text-black-600: #666666;
+    --text-black-300: #bbbbbb;
+}
+
+/* global */
 body{
     font-size:16px;
     line-height: 1.5;
@@ -57,7 +69,6 @@ img{
 }
 
 /* header */
-
 .header{
     padding:  20px 15px;
     position: absolute;
@@ -84,5 +95,33 @@ img{
 .header .hamburger-btn{
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .hamburger-btn span{
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: var(--bg-black-900);
+    position: relative;
+}
+
+.header .hamburger-btn span:before,
+.header .hamburger-btn span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black-900);
+}
+
+.header .hamburger-btn span:before{
+    top: -5px;
+}
+
+.header .hamburger-btn span:after{
+    top: 5px;
 }
